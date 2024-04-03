@@ -13,6 +13,14 @@ public sealed partial class MainWindow : Window
 
   private void Navigation_SelectionChanged(NavigationView sender, NavigationViewSelectionChangedEventArgs args)
   {
+    if (args.IsSettingsSelected)
+    {
+      ContentFrame.Navigate(typeof(SettingsPage));
+    }
+    else
+    {
+      ContentFrame.Navigate(typeof(HomePage));
+    }
   }
 
   private void ContentFrame_Navigated(object sender, NavigationEventArgs e)
