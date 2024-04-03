@@ -1,0 +1,10 @@
+{
+  "profiles": {
+    "EyeKeeper (Package)": {
+      "commandName": "MsixPackage"
+    },
+    "EyeKeeper (Unpackaged)": {
+      "commandName": "Project"
+    }
+  }
+}
