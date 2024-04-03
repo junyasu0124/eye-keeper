@@ -8,7 +8,23 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d">
 
-    <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center">
-        <Button x:Name="myButton" Click="myButton_Click">Click Me</Button>
-    </StackPanel>
+   <NavigationView
+      x:Name="navigation"
+      SelectionChanged="navigation_SelectionChanged"
+      IsSettingsVisible="True"
+      IsBackButtonVisible="Collapsed"
+      IsBackEnabled="False"
+      AlwaysShowHeader="True"
+      PaneDisplayMode="Left">
+
+      <NavigationView.MenuItems>
+         <NavigationViewItem x:Name="homeItem" Content="Home">
+            <NavigationViewItem.Icon>
+               <SymbolIcon Symbol="Home" />
+            </NavigationViewItem.Icon>
+         </NavigationViewItem>
+      </NavigationView.MenuItems>
+
+      <Frame x:Name="contentFrame" Navigated="contentFrame_Navigated" />
+   </NavigationView>
 </Window>
