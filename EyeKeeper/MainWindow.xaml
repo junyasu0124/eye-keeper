@@ -3,14 +3,13 @@
     x:Class="EyeKeeper.MainWindow"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-    xmlns:local="using:EyeKeeper"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d">
 
    <NavigationView
-      x:Name="navigation"
-      SelectionChanged="navigation_SelectionChanged"
+      x:Name="Navigation"
+      SelectionChanged="Navigation_SelectionChanged"
       IsSettingsVisible="True"
       IsBackButtonVisible="Collapsed"
       IsBackEnabled="False"
@@ -18,13 +17,13 @@
       PaneDisplayMode="Left">
 
       <NavigationView.MenuItems>
-         <NavigationViewItem x:Name="homeItem" Content="Home">
+         <NavigationViewItem x:Name="HomeItem" Content="Home">
             <NavigationViewItem.Icon>
                <SymbolIcon Symbol="Home" />
             </NavigationViewItem.Icon>
          </NavigationViewItem>
       </NavigationView.MenuItems>
 
-      <Frame x:Name="contentFrame" Navigated="contentFrame_Navigated" />
+      <Frame x:Name="ContentFrame" Navigated="ContentFrame_Navigated" />
    </NavigationView>
 </Window>
